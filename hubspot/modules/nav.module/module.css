@@ -1,0 +1,55 @@
+/* R17 Nav module */
+
+.r17-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--hairline);
+  background: color-mix(in srgb, var(--background) 90%, transparent);
+  backdrop-filter: blur(12px);
+}
+.r17-nav__inner {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.r17-nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+.r17-nav__logo {
+  height: 1.75rem;
+  width: auto;
+}
+.r17-nav__brand-text {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+}
+.r17-nav__links {
+  display: none;
+  align-items: center;
+  gap: 1.75rem;
+  font-size: 13px;
+  font-weight: 500;
+}
+.r17-nav__link {
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+.r17-nav__link:hover {
+  color: var(--ink);
+}
+.r17-nav__cta {
+  height: 2.5rem;
+  padding-inline: 1.25rem;
+  font-size: 13px;
+}
+
+@media (min-width: 1024px) {
+  .r17-nav__links { display: flex; }
+}

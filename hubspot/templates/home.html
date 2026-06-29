@@ -1,0 +1,51 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: R17 Home
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {{ standard_header_includes }}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet"
+  />
+  {{ require_css(get_asset_url('../css/main.css')) }}
+</head>
+<body>
+  {% module "site_nav" path="../modules/nav.module", label="Navigation" %}
+
+  <main>
+    {% dnd_area "body", label="Page sections" %}
+
+      {% dnd_section %}
+        {% dnd_column %}
+          {% dnd_module path="../modules/hero.module" %}{% end_dnd_module %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+      {% dnd_section %}
+        {% dnd_column %}
+          {% dnd_module path="../modules/services.module" %}{% end_dnd_module %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+      {% dnd_section %}
+        {% dnd_column %}
+          {% dnd_module path="../modules/contact-cta.module" %}{% end_dnd_module %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+    {% end_dnd_area %}
+  </main>
+
+  {% module "site_footer" path="../modules/footer.module", label="Footer" %}
+
+  {{ standard_footer_includes }}
+</body>
+</html>

@@ -1,0 +1,27 @@
+[
+  { "type": "text", "name": "eyebrow", "label": "Eyebrow", "default": "Contact us" },
+  { "type": "text", "name": "heading_lead", "label": "Heading — lead", "default": "Let's" },
+  { "type": "text", "name": "heading_emphasis", "label": "Heading — emphasis (serif)", "default": "talk." },
+  {
+    "type": "richtext",
+    "name": "intro",
+    "label": "Intro",
+    "default": "Tell us about your business and growth ambition. We'll come back to you within one business day with a custom proposal."
+  },
+  {
+    "type": "group",
+    "name": "cards",
+    "label": "Contact cards",
+    "occurrence": { "min": 0, "max": 6, "default": 3 },
+    "default": [
+      { "title_text": "Book a call", "detail": "Schedule a 30-minute intro", "link": { "content_id": null, "href": "#contact", "type": "EXTERNAL" } },
+      { "title_text": "Call us", "detail": "+41 43 588 19 23", "link": { "content_id": null, "href": "tel:+41435881923", "type": "EXTERNAL" } },
+      { "title_text": "Email us", "detail": "sales@r17ventures.com", "link": { "content_id": null, "href": "mailto:sales@r17ventures.com", "type": "EXTERNAL" } }
+    ],
+    "children": [
+      { "type": "text", "name": "title_text", "label": "Title", "default": "" },
+      { "type": "text", "name": "detail", "label": "Detail", "default": "" },
+      { "type": "url", "name": "link", "label": "Link", "default": { "content_id": null, "href": "#", "type": "EXTERNAL" } }
+    ]
+  }
+]

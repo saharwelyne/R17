@@ -1,0 +1,44 @@
+{# R17 Services — ported from src/components/home/Services.tsx #}
+<section id="services" class="r17-band-dark r17-services">
+  <div class="r17-container r17-section">
+
+    <div class="r17-services__head">
+      <div class="r17-services__head-main">
+        <p class="r17-eyebrow r17-eyebrow--accent">{{ module.eyebrow }}</p>
+        <h2 class="r17-services__title">
+          {{ module.heading_lead }}
+          <span class="r17-serif" style="color: var(--accent);">{{ module.heading_emphasis }}</span>.
+        </h2>
+      </div>
+      <div class="r17-services__head-aside">
+        <div class="r17-services__intro">{{ module.intro }}</div>
+      </div>
+    </div>
+
+    <div class="r17-services__grid">
+      {% for card in module.services %}
+        <article class="r17-service-card">
+          <div class="r17-service-card__top">
+            <span>{{ card.card_number }}</span>
+            <span aria-hidden="true">&rarr;</span>
+          </div>
+          <h3 class="r17-service-card__title">{{ card.card_title }}</h3>
+          <p class="r17-service-card__body">{{ card.card_body }}</p>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="r17-services__ctas">
+      {% if module.cta_primary_label %}
+        <a href="{{ module.cta_primary_url.href }}" class="r17-btn r17-btn--primary">
+          {{ module.cta_primary_label }}
+          <span class="r17-btn__arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      {% endif %}
+      {% if module.cta_secondary_label %}
+        <a href="{{ module.cta_secondary_url.href }}" class="r17-services__link">{{ module.cta_secondary_label }}</a>
+      {% endif %}
+    </div>
+
+  </div>
+</section>

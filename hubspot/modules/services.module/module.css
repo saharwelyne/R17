@@ -1,0 +1,109 @@
+/* R17 Services module */
+
+.r17-services__head {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: end;
+  row-gap: 2rem;
+}
+.r17-services__head-main {
+  grid-column: span 12;
+}
+.r17-services__head-aside {
+  grid-column: span 12;
+}
+.r17-services__title {
+  margin-top: 1.5rem;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+.r17-services__intro {
+  font-size: 15px;
+  line-height: 1.65;
+  color: color-mix(in srgb, var(--background) 70%, transparent);
+}
+
+.r17-services__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: color-mix(in srgb, var(--background) 10%, transparent);
+}
+
+.r17-service-card {
+  height: 100%;
+  background: var(--ink);
+  padding: 1.75rem;
+  transition: background-color 200ms ease;
+}
+.r17-service-card:hover {
+  background: var(--accent);
+}
+.r17-service-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: color-mix(in srgb, var(--background) 50%, transparent);
+}
+.r17-service-card:hover .r17-service-card__top {
+  color: color-mix(in srgb, var(--accent-foreground) 80%, transparent);
+}
+.r17-service-card__title {
+  margin-top: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--background);
+}
+.r17-service-card:hover .r17-service-card__title {
+  color: var(--accent-foreground);
+}
+.r17-service-card__body {
+  margin-top: 0.75rem;
+  font-size: 13px;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--background) 65%, transparent);
+}
+.r17-service-card:hover .r17-service-card__body {
+  color: color-mix(in srgb, var(--accent-foreground) 90%, transparent);
+}
+
+.r17-services__ctas {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.r17-services__link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--background);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: color-mix(in srgb, var(--background) 30%, transparent);
+}
+.r17-services__link:hover {
+  text-decoration-color: var(--accent);
+}
+
+@media (min-width: 768px) {
+  .r17-services__head-main { grid-column: span 8; }
+  .r17-services__head-aside { grid-column: span 4; }
+  .r17-services__title { font-size: 4.5rem; }
+}
+@media (min-width: 640px) {
+  .r17-services__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .r17-services__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1280px) {
+  .r17-services__grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}

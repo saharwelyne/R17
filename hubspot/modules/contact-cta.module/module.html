@@ -1,0 +1,26 @@
+{# R17 Contact CTA — ported from src/components/home/ContactCTA.tsx #}
+<section id="contact" class="r17-band-orange r17-cta">
+  <div class="r17-container r17-section r17-cta__inner">
+
+    <div class="r17-cta__head">
+      <p class="r17-cta__eyebrow">{{ module.eyebrow }}</p>
+      <h2 class="r17-cta__title">
+        {{ module.heading_lead }} <span class="r17-serif" style="color: inherit;">{{ module.heading_emphasis }}</span>
+      </h2>
+      <div class="r17-cta__intro">{{ module.intro }}</div>
+    </div>
+
+    <div class="r17-cta__cards">
+      {% for card in module.cards %}
+        <a href="{{ card.link.href }}" class="r17-cta-card">
+          <span>
+            <span class="r17-cta-card__title">{{ card.title_text }}</span>
+            <span class="r17-cta-card__detail">{{ card.detail }}</span>
+          </span>
+          <span class="r17-cta-card__arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

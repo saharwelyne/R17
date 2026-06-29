@@ -1,0 +1,78 @@
+[
+  {
+    "type": "text",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "default": "Performance-First Growth Partner"
+  },
+  {
+    "type": "text",
+    "name": "heading_lead",
+    "label": "Heading — lead",
+    "default": "Your growth"
+  },
+  {
+    "type": "text",
+    "name": "heading_highlight",
+    "label": "Heading — highlighted word",
+    "default": "partner."
+  },
+  {
+    "type": "text",
+    "name": "heading_sub_prefix",
+    "label": "Heading — second line prefix",
+    "default": "Engineered for"
+  },
+  {
+    "type": "text",
+    "name": "heading_sub_emphasis",
+    "label": "Heading — second line (serif)",
+    "default": "revenue & profitability."
+  },
+  {
+    "type": "richtext",
+    "name": "body_text",
+    "label": "Body",
+    "default": "We engineer revenue and profitability growth for ambitious brands. Expert team, battle-tested systems, and a business-first mindset — all measured against the numbers that matter to your board."
+  },
+  {
+    "type": "text",
+    "name": "cta_primary_label",
+    "label": "Primary CTA — label",
+    "default": "Book an intro call"
+  },
+  {
+    "type": "url",
+    "name": "cta_primary_url",
+    "label": "Primary CTA — link",
+    "default": { "content_id": null, "href": "#contact", "type": "EXTERNAL" }
+  },
+  {
+    "type": "text",
+    "name": "cta_secondary_label",
+    "label": "Secondary CTA — label",
+    "default": "See our services"
+  },
+  {
+    "type": "url",
+    "name": "cta_secondary_url",
+    "label": "Secondary CTA — link",
+    "default": { "content_id": null, "href": "#services", "type": "EXTERNAL" }
+  },
+  {
+    "type": "group",
+    "name": "stats",
+    "label": "Stats",
+    "occurrence": { "min": 0, "max": 8, "default": 4 },
+    "default": [
+      { "value": "$100M+", "caption": "in media managed" },
+      { "value": "70+", "caption": "active clients" },
+      { "value": "50+", "caption": "in-house team" },
+      { "value": "12+", "caption": "years of compounding" }
+    ],
+    "children": [
+      { "type": "text", "name": "value", "label": "Value", "default": "" },
+      { "type": "text", "name": "caption", "label": "Caption", "default": "" }
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+{# R17 Footer — ported from src/components/home/Footer.tsx #}
+<footer class="r17-band-dark r17-footer">
+  <div class="r17-container r17-footer__inner">
+
+    <div class="r17-footer__grid">
+      <div class="r17-footer__brand">
+        {% if module.logo.src %}
+          <img src="{{ module.logo.src }}" alt="{{ module.logo.alt }}" class="r17-footer__logo" />
+        {% endif %}
+        <p class="r17-footer__tagline">{{ module.tagline }}</p>
+        <div class="r17-footer__contact">{{ module.contact_block }}</div>
+      </div>
+
+      {% for col in module.columns %}
+        <div class="r17-footer__col">
+          <p class="r17-footer__col-title">{{ col.title_text }}</p>
+          <ul class="r17-footer__links">
+            {% for l in col.links %}
+              <li><a href="{{ l.link.href }}" class="r17-footer__link">{{ l.label_text }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="r17-footer__bottom">
+      <span>{{ module.copyright }}</span>
+      <div class="r17-footer__legal">
+        {% for l in module.legal_links %}
+          <a href="{{ l.link.href }}" class="r17-footer__link">{{ l.label_text }}</a>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</footer>

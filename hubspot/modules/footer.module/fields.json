@@ -1,0 +1,83 @@
+[
+  {
+    "type": "image",
+    "name": "logo",
+    "label": "Logo",
+    "default": { "src": "", "alt": "R17 Ventures", "width": 120, "height": 32 }
+  },
+  {
+    "type": "text",
+    "name": "tagline",
+    "label": "Tagline",
+    "default": "R17 Ventures AG - redefining growth through digital partnerships and solutions that really make an impact"
+  },
+  {
+    "type": "richtext",
+    "name": "contact_block",
+    "label": "Contact / address block",
+    "default": "<strong>Switzerland</strong><br>Selnaustrasse 5, 8001 Zürich<br><br>+41 43 588 19 23<br>sales@r17ventures.com"
+  },
+  {
+    "type": "group",
+    "name": "columns",
+    "label": "Link columns",
+    "occurrence": { "min": 0, "max": 6, "default": 3 },
+    "default": [
+      {
+        "title_text": "Services",
+        "links": [
+          { "label_text": "Strategy & Consultation", "link": { "content_id": null, "href": "#services", "type": "EXTERNAL" } },
+          { "label_text": "Paid Social", "link": { "content_id": null, "href": "#services", "type": "EXTERNAL" } },
+          { "label_text": "SEA / PPC", "link": { "content_id": null, "href": "#services", "type": "EXTERNAL" } },
+          { "label_text": "GEO & SEO", "link": { "content_id": null, "href": "#services", "type": "EXTERNAL" } }
+        ]
+      },
+      {
+        "title_text": "Products",
+        "links": [
+          { "label_text": "Foundations First", "link": { "content_id": null, "href": "#products", "type": "EXTERNAL" } },
+          { "label_text": "Performance First", "link": { "content_id": null, "href": "#products", "type": "EXTERNAL" } },
+          { "label_text": "GotPost", "link": { "content_id": null, "href": "#products", "type": "EXTERNAL" } }
+        ]
+      },
+      {
+        "title_text": "More",
+        "links": [
+          { "label_text": "Why R17", "link": { "content_id": null, "href": "#about", "type": "EXTERNAL" } },
+          { "label_text": "Pricing", "link": { "content_id": null, "href": "#pricing", "type": "EXTERNAL" } },
+          { "label_text": "Case Studies", "link": { "content_id": null, "href": "#work", "type": "EXTERNAL" } },
+          { "label_text": "Academy", "link": { "content_id": null, "href": "#academy", "type": "EXTERNAL" } }
+        ]
+      }
+    ],
+    "children": [
+      { "type": "text", "name": "title_text", "label": "Column title", "default": "" },
+      {
+        "type": "group",
+        "name": "links",
+        "label": "Links",
+        "occurrence": { "min": 0, "max": 20, "default": 1 },
+        "children": [
+          { "type": "text", "name": "label_text", "label": "Label", "default": "" },
+          { "type": "url", "name": "link", "label": "Link", "default": { "content_id": null, "href": "#", "type": "EXTERNAL" } }
+        ]
+      }
+    ]
+  },
+  { "type": "text", "name": "copyright", "label": "Copyright", "default": "© 2026 R17 Ventures AG. All rights reserved." },
+  {
+    "type": "group",
+    "name": "legal_links",
+    "label": "Legal links",
+    "occurrence": { "min": 0, "max": 6, "default": 3 },
+    "default": [
+      { "label_text": "Imprint", "link": { "content_id": null, "href": "#", "type": "EXTERNAL" } },
+      { "label_text": "Terms", "link": { "content_id": null, "href": "#", "type": "EXTERNAL" } },
+      { "label_text": "Privacy", "link": { "content_id": null, "href": "#", "type": "EXTERNAL" } }
+    ],
+    "children": [
+      { "type": "text", "name": "label_text", "label": "Label", "default": "" },
+      { "type": "url", "name": "link", "label": "Link", "default": { "content_id": null, "href": "#", "type": "EXTERNAL" } }
+    ]
+  }
+]

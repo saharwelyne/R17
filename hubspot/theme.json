@@ -1,0 +1,13 @@
+{
+  "label": "R17 Ventures",
+  "preview_path": "./templates/home.html",
+  "enable_domain_stylesheets": false,
+  "version": "1.0.0",
+  "author": {
+    "name": "R17 Ventures",
+    "email": "contact@welyne.com"
+  },
+  "responsive_breakpoints": [
+    { "name": "mobile", "mediaQuery": "max-width: 767px", "previewWidth": { "value": 375 } }
+  ]
+}

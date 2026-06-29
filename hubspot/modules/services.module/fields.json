@@ -1,0 +1,38 @@
+[
+  { "type": "text", "name": "eyebrow", "label": "Eyebrow", "default": "[ 03 ] Services" },
+  { "type": "text", "name": "heading_lead", "label": "Heading — lead", "default": "Our digital marketing" },
+  { "type": "text", "name": "heading_emphasis", "label": "Heading — emphasis (serif)", "default": "services" },
+  {
+    "type": "richtext",
+    "name": "intro",
+    "label": "Intro",
+    "default": "Ten disciplines, one operating partner. We staff senior, run them against a single growth thesis, and report on contribution margin — not vanity metrics."
+  },
+  {
+    "type": "group",
+    "name": "services",
+    "label": "Service cards",
+    "occurrence": { "min": 0, "max": 20, "default": 10 },
+    "default": [
+      { "card_number": "01", "card_title": "Paid Social", "card_body": "Performance creative and media on Meta, TikTok, LinkedIn, Snap, Pinterest, X — engineered for contribution margin." },
+      { "card_number": "02", "card_title": "SEA / PPC", "card_body": "Search engine marketing — any ad-click — including Google, Bing and Yahoo. Performance-engineered." },
+      { "card_number": "03", "card_title": "SEO", "card_body": "Technical and editorial SEO that compounds — built around your buyer journey, not vanity rankings." },
+      { "card_number": "04", "card_title": "Content Production", "card_body": "Performance creative at scale — motion, lifestyle and brand — produced by our in-house studio." },
+      { "card_number": "05", "card_title": "E-mail / SMS", "card_body": "Lifecycle, retention and onboarding flows that turn first-time buyers into a compounding revenue line." },
+      { "card_number": "06", "card_title": "Organic Social", "card_body": "Always-on social that earns share-of-search and feeds your paid funnel with proof and warmth." },
+      { "card_number": "07", "card_title": "HubSpot", "card_body": "Implementation, automation and revenue ops on HubSpot — so sales and marketing finally speak one language." },
+      { "card_number": "08", "card_title": "Websites & E-commerce", "card_body": "High-converting websites and stores on Webflow, Shopify and WordPress — designed by performance marketers." },
+      { "card_number": "09", "card_title": "Influencer Marketing", "card_body": "Vetted creator programmes with full-funnel measurement — not vanity, not gifting, real revenue." },
+      { "card_number": "10", "card_title": "Data Analysis & Reporting", "card_body": "Server-side tracking, attribution, and board-grade reporting your CFO will actually quote." }
+    ],
+    "children": [
+      { "type": "text", "name": "card_number", "label": "Number", "default": "" },
+      { "type": "text", "name": "card_title", "label": "Title", "default": "" },
+      { "type": "text", "name": "card_body", "label": "Description", "default": "" }
+    ]
+  },
+  { "type": "text", "name": "cta_primary_label", "label": "Primary CTA — label", "default": "Get started" },
+  { "type": "url", "name": "cta_primary_url", "label": "Primary CTA — link", "default": { "content_id": null, "href": "#contact", "type": "EXTERNAL" } },
+  { "type": "text", "name": "cta_secondary_label", "label": "Secondary CTA — label", "default": "See our results" },
+  { "type": "url", "name": "cta_secondary_url", "label": "Secondary CTA — link", "default": { "content_id": null, "href": "#work", "type": "EXTERNAL" } }
+]

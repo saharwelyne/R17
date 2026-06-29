@@ -1,0 +1,25 @@
+{# R17 Nav — ported from src/components/home/Nav.tsx (top-level links; dropdowns simplified for pilot) #}
+<header class="r17-nav">
+  <div class="r17-container r17-nav__inner">
+    <a href="{{ module.logo_link.href }}" class="r17-nav__brand">
+      {% if module.logo.src %}
+        <img src="{{ module.logo.src }}" alt="{{ module.logo.alt }}" class="r17-nav__logo" width="{{ module.logo.width }}" height="{{ module.logo.height }}" />
+      {% else %}
+        <span class="r17-nav__brand-text">R17 Ventures</span>
+      {% endif %}
+    </a>
+
+    <nav class="r17-nav__links" aria-label="Primary">
+      {% for item in module.links %}
+        <a href="{{ item.link.href }}" class="r17-nav__link">{{ item.label_text }}</a>
+      {% endfor %}
+    </nav>
+
+    {% if module.cta_label %}
+      <a href="{{ module.cta_url.href }}" class="r17-btn r17-btn--primary r17-nav__cta">
+        {{ module.cta_label }}
+        <span class="r17-btn__arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    {% endif %}
+  </div>
+</header>

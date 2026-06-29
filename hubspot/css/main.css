@@ -1,0 +1,170 @@
+/*
+ * R17 Ventures — HubSpot theme base
+ * Ported from the Lovable Tailwind v4 design system (src/styles.css).
+ * HubSpot does not run Tailwind, so tokens + utilities are written as native CSS.
+ */
+
+:root {
+  /* Surfaces */
+  --background: #ffffff;
+  --surface: #fafaf9;
+  --foreground: #1f1f1f;
+  --ink: #1a1a1a;
+  --ink-soft: #5e5e5e;
+  --hairline: #e7e5e1;
+
+  /* Brand accent — R17 orange */
+  --accent: #ec6726;
+  --accent-foreground: #ffffff;
+  --accent-soft: #fdeee4;
+
+  /* Type */
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", "Times New Roman", serif;
+
+  --radius-sm: 2px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: inherit;
+  margin: 0;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+/* ---- Utilities (ported from @utility in Tailwind source) ---- */
+
+.r17-container {
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.r17-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.r17-eyebrow__rule {
+  display: inline-block;
+  height: 1px;
+  width: 2.5rem;
+  background: var(--accent);
+}
+
+.r17-serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  color: var(--ink-soft);
+}
+
+/* ---- Buttons ---- */
+
+.r17-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  height: 3rem;
+  padding-inline: 1.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 200ms ease, background-color 200ms ease, color 200ms ease;
+}
+
+.r17-btn--primary {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+.r17-btn--primary:hover {
+  transform: translateY(-2px);
+}
+
+.r17-btn--ghost {
+  border: 1px solid var(--ink);
+  color: var(--ink);
+}
+.r17-btn--ghost:hover {
+  background-color: var(--ink);
+  color: var(--background);
+}
+
+.r17-btn__arrow {
+  transition: transform 200ms ease;
+}
+.r17-btn--primary:hover .r17-btn__arrow {
+  transform: translateX(4px);
+}
+
+/* ---- Shared section helpers ---- */
+
+.r17-section {
+  padding-block: 6rem;
+}
+@media (min-width: 768px) {
+  .r17-section {
+    padding-block: 8rem;
+  }
+}
+
+.r17-band-dark {
+  background-color: var(--ink);
+  color: var(--background);
+}
+.r17-band-orange {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.r17-eyebrow--accent {
+  color: var(--accent);
+}
+
+/* ---- Drag-and-drop layout reset ----
+ * Let each R17 module own its full-bleed background + container width,
+ * instead of HubSpot's default dnd-section max-width/padding.
+ */
+.dnd-section,
+.dnd-section > .row-fluid {
+  max-width: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

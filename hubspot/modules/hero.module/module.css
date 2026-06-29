@@ -1,0 +1,114 @@
+/* R17 Hero module — layout ported from Hero.tsx */
+
+.r17-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.r17-hero__inner {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.r17-hero__title {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6.8vw, 6.25rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+}
+
+.r17-hero__highlight {
+  position: relative;
+  display: inline-block;
+}
+.r17-hero__highlight-text {
+  position: relative;
+  z-index: 10;
+  padding-inline: 0.5rem;
+}
+.r17-hero__highlight-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.25rem;
+  z-index: 0;
+  height: 0.55em;
+  background: var(--accent);
+}
+
+.r17-hero__grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: end;
+  gap: 2rem;
+}
+
+.r17-hero__lead {
+  grid-column: span 12;
+}
+
+.r17-hero__body {
+  max-width: 36rem;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.r17-hero__ctas {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.r17-hero__stats {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+}
+
+.r17-stat {
+  border-top: 1px solid color-mix(in srgb, var(--ink) 15%, transparent);
+  padding-top: 0.75rem;
+}
+.r17-stat__value {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+.r17-stat__label {
+  margin-top: 0.25rem;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 768px) {
+  .r17-hero__inner {
+    padding-top: 4rem;
+    padding-bottom: 3.5rem;
+  }
+  .r17-hero__grid {
+    margin-top: 2.5rem;
+  }
+  .r17-hero__lead {
+    grid-column: span 7;
+  }
+  .r17-hero__stats {
+    grid-column: span 5;
+  }
+  .r17-stat__value {
+    font-size: 2.25rem;
+  }
+}

@@ -1,0 +1,51 @@
+{# R17 Hero — ported from src/components/home/Hero.tsx #}
+<section class="r17-hero">
+  <div class="r17-container r17-hero__inner">
+
+    <p class="r17-eyebrow">
+      <span class="r17-eyebrow__rule" aria-hidden="true"></span>
+      {{ module.eyebrow }}
+    </p>
+
+    <h1 class="r17-hero__title">
+      {{ module.heading_lead }}
+      <span class="r17-hero__highlight">
+        <span class="r17-hero__highlight-text">{{ module.heading_highlight }}</span>
+        <span class="r17-hero__highlight-bar" aria-hidden="true"></span>
+      </span>
+      <br />
+      {{ module.heading_sub_prefix }}
+      <span class="r17-serif">{{ module.heading_sub_emphasis }}</span>
+    </h1>
+
+    <div class="r17-hero__grid">
+      <div class="r17-hero__lead">
+        <div class="r17-hero__body">{{ module.body_text }}</div>
+
+        <div class="r17-hero__ctas">
+          {% if module.cta_primary_label %}
+            <a href="{{ module.cta_primary_url.href }}" class="r17-btn r17-btn--primary">
+              {{ module.cta_primary_label }}
+              <span class="r17-btn__arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          {% endif %}
+          {% if module.cta_secondary_label %}
+            <a href="{{ module.cta_secondary_url.href }}" class="r17-btn r17-btn--ghost">
+              {{ module.cta_secondary_label }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="r17-hero__stats">
+        {% for stat in module.stats %}
+          <div class="r17-stat">
+            <div class="r17-stat__value">{{ stat.value }}</div>
+            <div class="r17-stat__label">{{ stat.caption }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>

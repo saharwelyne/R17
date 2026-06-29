@@ -1,0 +1,29 @@
+[
+  {
+    "type": "image",
+    "name": "logo",
+    "label": "Logo",
+    "default": { "src": "", "alt": "R17 Ventures", "width": 120, "height": 28 }
+  },
+  { "type": "url", "name": "logo_link", "label": "Logo link", "default": { "content_id": null, "href": "/", "type": "EXTERNAL" } },
+  {
+    "type": "group",
+    "name": "links",
+    "label": "Nav links",
+    "occurrence": { "min": 0, "max": 12, "default": 6 },
+    "default": [
+      { "label_text": "Home", "link": { "content_id": null, "href": "/", "type": "EXTERNAL" } },
+      { "label_text": "Services", "link": { "content_id": null, "href": "#services", "type": "EXTERNAL" } },
+      { "label_text": "Case Studies", "link": { "content_id": null, "href": "#work", "type": "EXTERNAL" } },
+      { "label_text": "Pricing", "link": { "content_id": null, "href": "#pricing", "type": "EXTERNAL" } },
+      { "label_text": "Products", "link": { "content_id": null, "href": "#products", "type": "EXTERNAL" } },
+      { "label_text": "About Us", "link": { "content_id": null, "href": "#about", "type": "EXTERNAL" } }
+    ],
+    "children": [
+      { "type": "text", "name": "label_text", "label": "Label", "default": "" },
+      { "type": "url", "name": "link", "label": "Link", "default": { "content_id": null, "href": "#", "type": "EXTERNAL" } }
+    ]
+  },
+  { "type": "text", "name": "cta_label", "label": "CTA — label", "default": "Let's Talk" },
+  { "type": "url", "name": "cta_url", "label": "CTA — link", "default": { "content_id": null, "href": "#contact", "type": "EXTERNAL" } }
+]

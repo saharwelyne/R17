@@ -1,0 +1,14 @@
+[
+  {
+    "type": "color",
+    "name": "accent",
+    "label": "Accent (R17 orange)",
+    "default": { "color": "#EC6726", "opacity": 100 }
+  },
+  {
+    "type": "color",
+    "name": "ink",
+    "label": "Ink (near-black)",
+    "default": { "color": "#1f1f1f", "opacity": 100 }
+  }
+]
